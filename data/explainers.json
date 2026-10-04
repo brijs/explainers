@@ -16,35 +16,36 @@
       "image": null,
       "added": "2026-10-02",
       "updated": "2026-10-04",
-      "pushed_at": "2026-10-04T15:12:07Z",
+      "pushed_at": "2026-10-04T15:21:14Z",
       "thumb": "thumbs/the-effect-explainer.jpg",
-      "thumb_stamp": "2026-10-04T15:12:07Z"
+      "thumb_stamp": "2026-10-04T15:21:14Z"
     },
     {
       "name": "learn-panchang",
       "url": "https://brijs.github.io/learn-panchang/",
       "title": "Panchang with Chandra",
-      "description": "Panchang with Chandra: an animated, interactive guide to the Hindu calendar",
+      "description": "An animated, interactive guide to the Hindu calendar (Panchang): tithi, vara, nakshatra, yoga and karana, guided by Chandra the Moon.",
       "topic": "Sanskrit & Indian Heritage",
       "tags": [
         "Panchang",
         "Hindu calendar",
         "tithi",
         "nakshatra",
-        "astronomy"
+        "astronomy",
+        "3D"
       ],
       "image": null,
       "added": "2026-10-02",
       "updated": "2026-10-04",
-      "pushed_at": "2026-10-04T15:12:02Z",
+      "pushed_at": "2026-10-04T15:21:05Z",
       "thumb": "thumbs/learn-panchang.jpg",
-      "thumb_stamp": "2026-10-04T15:12:02Z"
+      "thumb_stamp": "2026-10-04T15:21:05Z"
     },
     {
       "name": "igcse-grade8-explainers",
       "url": "https://brijs.github.io/igcse-grade8-explainers/",
       "title": "Grade 8 IGCSE Explainers",
-      "description": "Interactive, animated, narrated Grade 8 IGCSE explainers: physics, chemistry, biology, computer science",
+      "description": "Interactive, animated, narrated explainers for Grade 8 Cambridge Lower Secondary / IGCSE: physics, chemistry, biology and computer science.",
       "topic": "School & Exam Prep",
       "tags": [
         "IGCSE",
@@ -57,34 +58,35 @@
       "image": null,
       "added": "2026-10-02",
       "updated": "2026-10-04",
-      "pushed_at": "2026-10-04T15:11:56Z",
+      "pushed_at": "2026-10-04T15:20:49Z",
       "thumb": "thumbs/igcse-grade8-explainers.jpg",
-      "thumb_stamp": "2026-10-04T15:11:56Z"
+      "thumb_stamp": "2026-10-04T15:20:49Z"
     },
     {
       "name": "claude-code-dojo",
       "url": "https://brijs.github.io/claude-code-dojo/",
       "title": "Claude Code Dojo with Sensei Shell",
-      "description": "Claude Code Dojo: an interactive, Kokoro-narrated retro-terminal explainer with Sensei Shell. 22 hands-on lessons on using Claude Code well, shipped as a single HTML file.",
+      "description": "An interactive, Kokoro-narrated retro-terminal explainer with 22 hands-on lessons on using Claude Code well.",
       "topic": "AI & Developer Tools",
       "tags": [
         "Claude Code",
         "CLI",
         "prompting",
-        "subagents"
+        "subagents",
+        "workflow"
       ],
       "image": null,
       "added": "2026-10-02",
       "updated": "2026-10-04",
-      "pushed_at": "2026-10-04T15:11:47Z",
+      "pushed_at": "2026-10-04T15:21:22Z",
       "thumb": "thumbs/claude-code-dojo.jpg",
-      "thumb_stamp": "2026-10-04T15:11:47Z"
+      "thumb_stamp": "2026-10-04T15:21:22Z"
     },
     {
       "name": "human-dna-explainer",
       "url": "https://brijs.github.io/human-dna-explainer/",
       "title": "DNA & Protein Explainers",
-      "description": "Interactive 3D narrated explainer on chromosomes, DNA, genes and the double helix (9th grade)",
+      "description": "Interactive 3D narrated explainers on chromosomes, DNA, genes, the double helix and how proteins fold.",
       "topic": "Science",
       "tags": [
         "DNA",
@@ -97,28 +99,29 @@
       "image": null,
       "added": "2026-10-04",
       "updated": "2026-10-04",
-      "pushed_at": "2026-10-04T15:11:51Z",
+      "pushed_at": "2026-10-04T15:20:42Z",
       "thumb": "thumbs/human-dna-explainer.jpg",
-      "thumb_stamp": "2026-10-04T15:11:51Z"
+      "thumb_stamp": "2026-10-04T15:20:42Z"
     },
     {
       "name": "ashtadhyayi-explorer",
       "url": "https://brijs.github.io/ashtadhyayi-explorer/",
       "title": "Aṣṭādhyāyī Explorer: Pāṇini's grammar, interactive",
-      "description": "Look up, explore and learn all 3,983 sūtras of Pāṇini's Aṣṭādhyāyī, with interactive explainers and connections to computer science.",
+      "description": "Pāṇini's Aṣṭādhyāyī, explorable: all 3,983 sūtras, interactive explainers, a derivation debugger, and Pāṇini & computer science.",
       "topic": "Sanskrit & Indian Heritage",
       "tags": [
         "Panini",
         "Sanskrit",
         "grammar",
-        "sutras"
+        "sutras",
+        "computer science"
       ],
       "image": null,
       "added": "2026-10-04",
       "updated": "2026-10-04",
-      "pushed_at": "2026-10-04T15:11:39Z",
+      "pushed_at": "2026-10-04T15:20:58Z",
       "thumb": "thumbs/ashtadhyayi-explorer.jpg",
-      "thumb_stamp": "2026-10-04T15:11:39Z"
+      "thumb_stamp": "2026-10-04T15:20:58Z"
     }
   ]
 }
