@@ -119,9 +119,30 @@
       "image": null,
       "added": "2026-10-04",
       "updated": "2026-10-04",
-      "pushed_at": "2026-10-04T15:20:58Z",
+      "pushed_at": "2026-10-04T18:34:44Z",
       "thumb": "thumbs/ashtadhyayi-explorer.jpg",
-      "thumb_stamp": "2026-10-04T15:20:58Z"
+      "thumb_stamp": "2026-10-04T18:34:44Z"
+    },
+    {
+      "name": "quantum-mechanics-explainer",
+      "url": "https://brijs.github.io/quantum-mechanics-explainer/",
+      "title": "Quantum Mechanics: The Theoretical Minimum, animated",
+      "description": "Animated, narrated deep dive through all ten lectures of Susskind and Friedman's Quantum Mechanics: The Theoretical Minimum, with interactive math. By Brijesh Shetty (github.com/brijs).",
+      "topic": "Science",
+      "tags": [
+        "quantum mechanics",
+        "Susskind",
+        "physics",
+        "qubits",
+        "spin",
+        "entanglement"
+      ],
+      "image": null,
+      "added": "2026-10-04",
+      "updated": "2026-10-04",
+      "pushed_at": "2026-10-04T19:35:49Z",
+      "thumb": "thumbs/quantum-mechanics-explainer.jpg",
+      "thumb_stamp": "2026-10-04T19:35:49Z"
     }
   ]
 }
