@@ -6,9 +6,14 @@
 <title>Animated Explainers</title>
 <meta name="description" content="Interactive, narrated, animated explainers by Brijesh Shetty, organised by topic.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234263eb'/%3E%3Cpath d='M24 18l22 14-22 14z' fill='%23fff'/%3E%3C/svg%3E">
+<script>try{var s=localStorage.getItem('theme');if(s==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
 <style>
 :root{--bg:#f6f7fb;--paper:#fff;--ink:#16213a;--muted:#5a6785;--line:#dde4f0;--shadow:0 2px 10px rgba(22,33,58,.08);--hover:0 8px 24px rgba(22,33,58,.14);--focus:#4263eb}
-@media (prefers-color-scheme:dark){:root{--bg:#0e1322;--paper:#171e36;--ink:#eef2fb;--muted:#9fabc8;--line:#2a3558;--shadow:none;--hover:0 8px 24px rgba(0,0,0,.4);--focus:#8ea2ff}}
+html{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark;--bg:#0e1322;--paper:#171e36;--ink:#eef2fb;--muted:#9fabc8;--line:#2a3558;--shadow:none;--hover:0 8px 24px rgba(0,0,0,.4);--focus:#8ea2ff}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.theme{flex:none;width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--ink);font-size:20px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.theme:hover{border-color:var(--ink)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 main{max-width:1120px;margin:0 auto;padding:40px 16px 64px}
@@ -49,7 +54,7 @@ footer a{color:inherit}
 </head>
 <body>
 <main>
-<h1>Animated Explainers</h1>
+<div class="top"><h1>Animated Explainers</h1><button class="theme" id="theme" type="button" aria-label="Switch to dark mode" title="Toggle light / dark"></button></div>
 <p class="lede">{{COUNT}} interactive, narrated explainers across {{TOPICS}} topics. Pick a topic or search; new ones appear here automatically.</p>
 <div class="bar">
 <input class="search" type="search" id="q" placeholder="Search explainers, tags, topics…" aria-label="Search explainers" autocomplete="off">
@@ -62,6 +67,17 @@ footer a{color:inherit}
 <footer>By <a href="https://github.com/{{OWNER}}">{{OWNER}}</a> · Updated {{UPDATED}} · rebuilt automatically from GitHub</footer>
 </main>
 <script>
+(function(){
+  var tb=document.getElementById('theme'),root=document.documentElement;
+  function sync(){var d=root.dataset.theme==='dark';tb.textContent=d?'☀️':'🌙';tb.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode')}
+  tb.addEventListener('click',function(){
+    var d=root.dataset.theme!=='dark';
+    if(d)root.dataset.theme='dark';else delete root.dataset.theme;
+    try{localStorage.setItem('theme',d?'dark':'light')}catch(e){}
+    sync();
+  });
+  sync();
+})();
 (function(){
   var q=document.getElementById('q'),chips=document.querySelectorAll('.chip'),secs=document.querySelectorAll('.topic'),empty=document.getElementById('empty'),topic='';
   function apply(){
