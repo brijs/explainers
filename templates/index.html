@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Animated Explainers</title>
+<meta name="description" content="Interactive, narrated, animated explainers by Brijesh Shetty, organised by topic.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234263eb'/%3E%3Cpath d='M24 18l22 14-22 14z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#f6f7fb;--paper:#fff;--ink:#16213a;--muted:#5a6785;--line:#dde4f0;--shadow:0 2px 10px rgba(22,33,58,.08);--hover:0 8px 24px rgba(22,33,58,.14);--focus:#4263eb}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1322;--paper:#171e36;--ink:#eef2fb;--muted:#9fabc8;--line:#2a3558;--shadow:none;--hover:0 8px 24px rgba(0,0,0,.4);--focus:#8ea2ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:1120px;margin:0 auto;padding:40px 16px 64px}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:0 0 8px;letter-spacing:-.02em}
+.lede{color:var(--muted);margin:0 0 24px;max-width:60ch}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0;margin:0 0 8px;border-bottom:1px solid var(--line)}
+.search{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);font:inherit;margin-bottom:10px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;cursor:pointer}
+.chip span{color:var(--muted);margin-left:2px}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip[aria-pressed=true] span{color:inherit;opacity:.7}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.topic{margin-top:36px;scroll-margin-top:110px}
+.topic>header{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:22px;background:color-mix(in srgb,var(--accent) 18%,transparent);flex:none}
+.topic h2{margin:0;font-size:22px}.topic h2 small{color:var(--muted);font-weight:500;font-size:15px;margin-left:4px}
+.topic header p{margin:0;color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:14px;overflow:hidden;color:inherit;text-decoration:none;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--hover)}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+.media{position:relative;aspect-ratio:16/9;background:var(--line)}
+.media img{width:100%;height:100%;object-fit:cover;display:block}
+.ph{width:100%;height:100%;display:grid;place-items:center;font-size:52px;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 35%,var(--paper)),color-mix(in srgb,var(--accent) 8%,var(--paper)))}
+.new{position:absolute;top:8px;right:8px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px}
+.body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.body h3{margin:0;font-size:18px;line-height:1.25}
+.body p{margin:0;color:var(--muted);font-size:14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.tags li{font-size:12px;padding:2px 8px;border-radius:999px;background:color-mix(in srgb,var(--accent) 14%,transparent)}
+.foot{margin-top:auto;font-size:12px;color:var(--muted)}
+.empty{display:none;color:var(--muted);text-align:center;margin:48px 0}
+footer{margin-top:48px;color:var(--muted);font-size:13px;text-align:center}
+footer a{color:inherit}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main>
+<h1>Animated Explainers</h1>
+<p class="lede">{{COUNT}} interactive, narrated explainers across {{TOPICS}} topics. Pick a topic or search; new ones appear here automatically.</p>
+<div class="bar">
+<input class="search" type="search" id="q" placeholder="Search explainers, tags, topics…" aria-label="Search explainers" autocomplete="off">
+<div class="chips" id="chips">
+{{CHIPS}}
+</div>
+</div>
+{{SECTIONS}}
+<p class="empty" id="empty">No explainers match that search.</p>
+<footer>By <a href="https://github.com/{{OWNER}}">{{OWNER}}</a> · Updated {{UPDATED}} · rebuilt automatically from GitHub</footer>
+</main>
+<script>
+(function(){
+  var q=document.getElementById('q'),chips=document.querySelectorAll('.chip'),secs=document.querySelectorAll('.topic'),empty=document.getElementById('empty'),topic='';
+  function apply(){
+    var s=q.value.trim().toLowerCase(),total=0;
+    secs.forEach(function(sec){
+      var n=0;
+      sec.querySelectorAll('.card').forEach(function(c){
+        var ok=c.dataset.hay.indexOf(s)>-1;c.hidden=!ok;if(ok)n++;
+      });
+      var show=n>0&&(!topic||sec.dataset.topic===topic);sec.hidden=!show;if(show)total+=n;
+    });
+    empty.style.display=total?'none':'block';
+  }
+  function pick(t,push){
+    topic=t;chips.forEach(function(c){c.setAttribute('aria-pressed',c.dataset.topic===t?'true':'false')});
+    if(push)try{history.replaceState(null,'',t?'#'+t:location.pathname)}catch(e){}
+    apply();
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){pick(c.dataset.topic,true)})});
+  q.addEventListener('input',apply);
+  var h=location.hash.slice(1);if(h&&document.querySelector('.chip[data-topic="'+h+'"]'))pick(h,false);
+})();
+</script>
+</body>
+</html>

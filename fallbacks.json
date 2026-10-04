@@ -1,0 +1,9 @@
+{
+  "_comment": "Used ONLY when a page has no explainer:* meta tags. Once the page declares its own tags, these are ignored and can be deleted.",
+  "human-dna-explainer":      {"topic": "Science", "tags": ["DNA", "genes", "chromosomes", "proteins", "AlphaFold", "3D"]},
+  "igcse-grade8-explainers":  {"topic": "School & Exam Prep", "tags": ["IGCSE", "Grade 8", "physics", "chemistry", "biology", "computer science"]},
+  "ashtadhyayi-explorer":     {"topic": "Sanskrit & Indian Heritage", "tags": ["Panini", "Sanskrit", "grammar", "sutras"]},
+  "learn-panchang":           {"topic": "Sanskrit & Indian Heritage", "tags": ["Panchang", "Hindu calendar", "tithi", "nakshatra", "astronomy"]},
+  "the-effect-explainer":     {"topic": "Data & Research", "tags": ["causality", "research design", "statistics", "economics"]},
+  "claude-code-dojo":         {"topic": "AI & Developer Tools", "tags": ["Claude Code", "CLI", "prompting", "subagents"]}
+}

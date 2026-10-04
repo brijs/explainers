@@ -1,0 +1,60 @@
+name: Update explainer index
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'      # safety net: every 6 hours
+  workflow_dispatch:            # run now: gh workflow run update-index.yml -R brijs/explainers
+  push:
+    branches: [main]
+    paths: [scripts/**, templates/**, fallbacks.json, topics.json, .github/workflows/update-index.yml]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Discover explainers and read their metadata
+        run: python scripts/build_index.py fetch
+        env: { GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}' }
+      - name: Any thumbnails to (re)take?
+        id: pend
+        run: echo "n=$(python scripts/thumbs.py --pending)" >> "$GITHUB_OUTPUT"
+      - name: Install browser
+        if: steps.pend.outputs.n != '0'
+        run: pip install playwright && playwright install --with-deps chromium
+      - name: Take thumbnails
+        if: steps.pend.outputs.n != '0'
+        continue-on-error: true
+        run: python scripts/thumbs.py
+      - name: Render site
+        run: python scripts/build_index.py render
+      - name: Commit data and thumbnails
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data thumbs
+          git diff --cached --quiet || (git commit -m "Update explainer index data" && git push)
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.d.outputs.page_url }}
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v4

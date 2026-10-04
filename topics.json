@@ -1,0 +1,8 @@
+{
+  "_comment": "Optional. Controls order, emoji, colour and blurb of topic sections. Topics not listed here still appear (after these, A-Z) with defaults, so new topics need no config.",
+  "Science":                    {"emoji": "🧬", "color": "#0f8b8d", "blurb": "How living things and the physical world work."},
+  "School & Exam Prep":         {"emoji": "🎓", "color": "#4263eb", "blurb": "Curriculum-aligned revision, made visual."},
+  "Sanskrit & Indian Heritage": {"emoji": "🪔", "color": "#c9670a", "blurb": "Language, calendars and ideas from the Indian tradition."},
+  "Data & Research":            {"emoji": "📊", "color": "#7c5cd6", "blurb": "Statistics, causality and how we know what we know."},
+  "AI & Developer Tools":       {"emoji": "🤖", "color": "#2f9e44", "blurb": "Working well with AI and the command line."}
+}
