@@ -143,6 +143,28 @@
       "pushed_at": "2026-10-04T19:35:49Z",
       "thumb": "thumbs/quantum-mechanics-explainer.jpg",
       "thumb_stamp": "2026-10-04T19:35:49Z"
+    },
+    {
+      "name": "shastra-ai-explainer",
+      "url": "https://brijs.github.io/shastra-ai-explainer/",
+      "title": "Why Shastras in the Age of AI: A Decoded Talk",
+      "description": "A narrated, interactive explainer of a talk on why Indian scriptures matter in the age of AI: every Sanskrit verse decoded word by word, root by root, with Pāṇini's cases, kārakas and suffix rules animated.",
+      "topic": "Sanskrit & Indian Heritage",
+      "tags": [
+        "Sanskrit",
+        "Vedas",
+        "Shastras",
+        "Pāṇini",
+        "grammar",
+        "dhātu",
+        "AI"
+      ],
+      "image": "https://brijs.github.io/shastra-ai-explainer/thumb.png",
+      "added": "2026-10-05",
+      "updated": "2026-10-05",
+      "pushed_at": "2026-10-05T05:48:19Z",
+      "thumb": null,
+      "thumb_stamp": null
     }
   ]
 }
