@@ -118,10 +118,10 @@
       ],
       "image": null,
       "added": "2026-10-04",
-      "updated": "2026-10-05",
-      "pushed_at": "2026-10-05T13:17:11Z",
+      "updated": "2026-10-08",
+      "pushed_at": "2026-10-08T03:37:09Z",
       "thumb": "thumbs/ashtadhyayi-explorer.jpg",
-      "thumb_stamp": "2026-10-05T13:17:11Z"
+      "thumb_stamp": "2026-10-08T03:37:09Z"
     },
     {
       "name": "quantum-mechanics-explainer",
@@ -165,6 +165,28 @@
       "pushed_at": "2026-10-05T05:48:19Z",
       "thumb": null,
       "thumb_stamp": null
+    },
+    {
+      "name": "learn-nyaya",
+      "url": "https://brijs.github.io/learn-nyaya/",
+      "title": "Nyāya-sūtra, methodically",
+      "description": "An animated, narrated, interactive walk through Gautama's Nyāya-sūtra: the sixteen topics, pramāṇas, the five-limbed argument, vyāpti, fallacies and the art of debate, with a logic lab and a debate arena.",
+      "topic": "Sanskrit & Indian Heritage",
+      "tags": [
+        "Nyāya",
+        "Gautama",
+        "logic",
+        "Sanskrit",
+        "sūtras",
+        "debate",
+        "inference"
+      ],
+      "image": null,
+      "added": "2026-10-08",
+      "updated": "2026-10-08",
+      "pushed_at": "2026-10-08T04:17:57Z",
+      "thumb": "thumbs/learn-nyaya.jpg",
+      "thumb_stamp": "2026-10-08T04:17:57Z"
     }
   ]
 }
