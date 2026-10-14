@@ -207,6 +207,27 @@
       "pushed_at": "2026-10-08T10:33:16Z",
       "thumb": "thumbs/how-engines-work.jpg",
       "thumb_stamp": "2026-10-08T10:33:16Z"
+    },
+    {
+      "name": "bengaluru-traffic",
+      "url": "https://brijs.github.io/bengaluru-traffic/",
+      "title": "Namma Roads",
+      "description": "An interactive 3D simulator of Bengaluru's road and traffic issues — turn issues up or down, fix them on the map, and watch jams, honking, stress and crashes change.",
+      "topic": "Cities & Society",
+      "tags": [
+        "Bengaluru",
+        "traffic",
+        "road safety",
+        "simulation",
+        "3D",
+        "Kannada"
+      ],
+      "image": null,
+      "added": "2026-10-14",
+      "updated": "2026-10-14",
+      "pushed_at": "2026-10-14T17:57:37Z",
+      "thumb": "thumbs/bengaluru-traffic.jpg",
+      "thumb_stamp": "2026-10-14T17:57:37Z"
     }
   ]
 }
