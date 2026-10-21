@@ -228,6 +228,27 @@
       "pushed_at": "2026-10-14T20:45:04Z",
       "thumb": "thumbs/bengaluru-traffic.jpg",
       "thumb_stamp": "2026-10-14T20:45:04Z"
+    },
+    {
+      "name": "ayurveda-spices",
+      "url": "https://brijs.github.io/ayurveda-spices/",
+      "title": "Ayurveda spices",
+      "description": "An animated, narrated apothecary of Ayurvedic spices: doṣas and dhātus, Sanskrit names and their roots, blends like garam masala and thuna paha, and what the evidence says about joints, teeth, blood sugar, blood pressure and hair. Inspired by a Matale spice garden in Sri Lanka.",
+      "topic": "Sanskrit & Indian Heritage",
+      "tags": [
+        "Ayurveda",
+        "spices",
+        "Sanskrit",
+        "Sri Lanka",
+        "herbal medicine",
+        "doṣa"
+      ],
+      "image": null,
+      "added": "2026-10-21",
+      "updated": "2026-10-21",
+      "pushed_at": "2026-10-21T16:02:57Z",
+      "thumb": "thumbs/ayurveda-spices.jpg",
+      "thumb_stamp": "2026-10-21T16:02:57Z"
     }
   ]
 }
