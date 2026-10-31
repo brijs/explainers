@@ -249,6 +249,26 @@
       "pushed_at": "2026-10-21T16:02:57Z",
       "thumb": "thumbs/ayurveda-spices.jpg",
       "thumb_stamp": "2026-10-21T16:02:57Z"
+    },
+    {
+      "name": "skill-explainers",
+      "url": "https://brijs.github.io/skill-explainers/",
+      "title": "Skill Explainers",
+      "description": "Interactive explainers of Claude Code skills: how each one is organised, and the domain knowledge it is built on.",
+      "topic": "AI & Developer Tools",
+      "tags": [
+        "Claude Code",
+        "skills",
+        "skill authoring",
+        "rendering",
+        "animation"
+      ],
+      "image": null,
+      "added": "2026-10-31",
+      "updated": "2026-10-31",
+      "pushed_at": "2026-10-31T08:52:17Z",
+      "thumb": "thumbs/skill-explainers.jpg",
+      "thumb_stamp": "2026-10-31T08:52:17Z"
     }
   ]
 }
