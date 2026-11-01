@@ -15,10 +15,10 @@
       ],
       "image": null,
       "added": "2026-10-02",
-      "updated": "2026-10-04",
-      "pushed_at": "2026-10-04T15:21:14Z",
+      "updated": "2026-11-01",
+      "pushed_at": "2026-11-01T19:54:36Z",
       "thumb": "thumbs/the-effect-explainer.jpg",
-      "thumb_stamp": "2026-10-04T15:21:14Z"
+      "thumb_stamp": "2026-11-01T19:54:36Z"
     },
     {
       "name": "learn-panchang",
@@ -36,10 +36,10 @@
       ],
       "image": null,
       "added": "2026-10-02",
-      "updated": "2026-10-04",
-      "pushed_at": "2026-10-04T15:21:05Z",
+      "updated": "2026-11-01",
+      "pushed_at": "2026-11-01T19:50:00Z",
       "thumb": "thumbs/learn-panchang.jpg",
-      "thumb_stamp": "2026-10-04T15:21:05Z"
+      "thumb_stamp": "2026-11-01T19:50:00Z"
     },
     {
       "name": "igcse-grade8-explainers",
@@ -57,10 +57,10 @@
       ],
       "image": null,
       "added": "2026-10-02",
-      "updated": "2026-10-05",
-      "pushed_at": "2026-10-05T14:16:46Z",
+      "updated": "2026-11-01",
+      "pushed_at": "2026-11-01T19:49:53Z",
       "thumb": "thumbs/igcse-grade8-explainers.jpg",
-      "thumb_stamp": "2026-10-05T14:16:46Z"
+      "thumb_stamp": "2026-11-01T19:49:53Z"
     },
     {
       "name": "claude-code-dojo",
@@ -139,10 +139,10 @@
       ],
       "image": null,
       "added": "2026-10-04",
-      "updated": "2026-10-04",
-      "pushed_at": "2026-10-04T19:35:49Z",
+      "updated": "2026-11-01",
+      "pushed_at": "2026-11-01T19:50:03Z",
       "thumb": "thumbs/quantum-mechanics-explainer.jpg",
-      "thumb_stamp": "2026-10-04T19:35:49Z"
+      "thumb_stamp": "2026-11-01T19:50:03Z"
     },
     {
       "name": "shastra-ai-explainer",
@@ -161,8 +161,8 @@
       ],
       "image": "https://brijs.github.io/shastra-ai-explainer/thumb.png",
       "added": "2026-10-05",
-      "updated": "2026-10-05",
-      "pushed_at": "2026-10-05T05:48:19Z",
+      "updated": "2026-11-01",
+      "pushed_at": "2026-11-01T19:54:27Z",
       "thumb": null,
       "thumb_stamp": null
     },
@@ -183,10 +183,10 @@
       ],
       "image": null,
       "added": "2026-10-08",
-      "updated": "2026-10-08",
-      "pushed_at": "2026-10-08T04:17:57Z",
+      "updated": "2026-11-01",
+      "pushed_at": "2026-11-01T19:49:56Z",
       "thumb": "thumbs/learn-nyaya.jpg",
-      "thumb_stamp": "2026-10-08T04:17:57Z"
+      "thumb_stamp": "2026-11-01T19:49:56Z"
     },
     {
       "name": "how-engines-work",
@@ -265,10 +265,10 @@
       ],
       "image": null,
       "added": "2026-10-31",
-      "updated": "2026-10-31",
-      "pushed_at": "2026-10-31T08:52:17Z",
+      "updated": "2026-11-01",
+      "pushed_at": "2026-11-01T19:54:30Z",
       "thumb": "thumbs/skill-explainers.jpg",
-      "thumb_stamp": "2026-10-31T08:52:17Z"
+      "thumb_stamp": "2026-11-01T19:54:30Z"
     }
   ]
 }
