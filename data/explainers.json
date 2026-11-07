@@ -248,6 +248,27 @@
       "pushed_at": "2026-11-01T19:54:30Z",
       "thumb": "thumbs/skill-explainers.jpg",
       "thumb_stamp": "2026-11-01T19:54:30Z"
+    },
+    {
+      "name": "devotional-songs",
+      "url": "https://brijs.github.io/devotional-songs/",
+      "title": "Devotional Songs",
+      "description": "Devotional songs to read slowly, starting with the Hanuman Chalisa: original text in nine Indian scripts, transliteration, word-by-word meanings traced to Sanskrit roots, the stories behind each verse, a recitation counter and a synced kirtan recording.",
+      "topic": "Sanskrit & Indian Heritage",
+      "tags": [
+        "Hanuman Chalisa",
+        "Tulsidas",
+        "Awadhi",
+        "bhakti",
+        "word-by-word",
+        "dhatu"
+      ],
+      "image": "https://brijs.github.io/devotional-songs/thumb.png",
+      "added": "2026-11-07",
+      "updated": "2026-11-07",
+      "pushed_at": "2026-11-07T03:39:55Z",
+      "thumb": null,
+      "thumb_stamp": null
     }
   ]
 }
